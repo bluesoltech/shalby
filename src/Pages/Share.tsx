@@ -9,7 +9,7 @@ import { FaHome } from "react-icons/fa";
 import { LuImagePlus } from "react-icons/lu";
 
 import React, { useState, useRef } from "react";
-import post from "/Post.png";
+import post from "/Post.jpg";
 import "./Share.css";
 
 import ReactCrop, {
@@ -163,9 +163,9 @@ export default function App() {
   }
 
   return (
-    <div className="z-1 flex flex-col items-center  p-5  justify-evenly overflow-hidden min-h-[60vh] md:min-h-[70vh]">
-      <h1 className="text-4xl font-bold text-[#713687] border-[1px] px-4 py-2 rounded-xl ">
-        Share Event
+    <div className="z-1 flex flex-col items-center  p-5   overflow-hidden min-h-[60vh] md:min-h-[70vh]">
+      <h1 className="text-2xl md:text-4xl font-bold text-[#713687] border-[1px] border-[#713687] px-4 py-2 rounded-xl ">
+        Create Your Own Post
       </h1>
       {!!imgSrc && (
         <div className={done ? "" : ""}>
@@ -234,17 +234,47 @@ export default function App() {
       <div className={done ? "hidden m-3" : "m-3"}>
         {!imgSrc && (
           <div className="flex flex-col items-center justify-center gap-4 inputLelo my-10">
-            <p className="text-xl">Upload your Image</p>
-            <label className="bg-[#713687] p-4 rounded-[50%]" htmlFor="file">
-              <LuImagePlus className="text-4xl text-white" />
-            </label>
-            <input
-              id="file"
-              className=""
-              type="file"
-              accept="image/*"
-              onChange={onSelectFile}
-            />
+            <div className="flex flex-col md:flex-row gap-4">
+              <img
+                src="/Example.png"
+                className="w-[300px] border-[1px]"
+                alt=""
+              />
+              <div className="flex flex-col items-center">
+                <h1 className="uppercase text-center text-xl font-bold text-[#713687] pb-5">
+                  Be a part of walk of hope
+                </h1>
+                <p className="text-sm text-gray-500 text-justify">
+                  Create your own poster just by a click of button
+                </p>
+                <img
+                  src="/help.jpg"
+                  className="w-[300px] border-[2px] rounded opacity-45"
+                  alt=""
+                />
+                <p className="my-4 text-center text-[#713687]">
+                  Be a part of Event. Register Now!
+                </p>
+                <button className="bg-blue-500 py-1 px-4 rounded-xl text-white hover:bg-blue-700">
+                  <a href="/">Register Now</a>
+                </button>
+              </div>
+            </div>
+            <div className=" flex flex-col items-center justify-center gap-4 inputLelo bg-gray-200 px-9 py-2 rounded-xl">
+              <p className="text-lg text-black uppercase font-bold">
+                Upload your Image
+              </p>
+              <label className="bg-[#713687] p-4 rounded-[50%]" htmlFor="file">
+                <LuImagePlus className="text-4xl text-white" />
+              </label>
+              <input
+                id="file"
+                className=""
+                type="file"
+                accept="image/*"
+                onChange={onSelectFile}
+              />
+            </div>
           </div>
         )}
         {imgSrc && (
@@ -285,7 +315,7 @@ export default function App() {
                 </p>
               </div>
             )}
-            <div className="absolute max-w-[90.2778px] max-h-[90.2778px] top-[122.9167px] left-[31.3889px]">
+            <div className="absolute max-w-[91.2778px] max-h-[91.2778px] top-[122.9167px] left-[32.3889px]">
               <canvas
                 ref={previewCanvasRef}
                 className="rounded-[50%] w-full h-full"
