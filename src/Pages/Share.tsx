@@ -309,8 +309,8 @@ export default function App() {
           <div className="relative w-[300px] mt-5">
             <img src={post} className="" alt="" />
             {name && (
-              <div className="absolute flex items-center justify-center  w-[116.2778px] h-[24.722px] top-[155.1667px] left-[118.0556px]">
-                <p className=" uppercase font-bold text-[12px] ">{name}</p>
+              <div className="absolute flex items-center justify-center  w-[116.2778px] h-[24.722px] top-[155.1667px] left-[122.0556px]">
+                <p className=" uppercase font-bold text-[10px] ">{name}</p>
               </div>
             )}
             <div className="absolute max-w-[91.2778px] max-h-[91.2778px] top-[121.9167px] left-[36.8889px]">
